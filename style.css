@@ -22,7 +22,7 @@ header{
     width: 95%;
     padding: 10px 20px;
     border-radius: var(--radius);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +37,8 @@ input{
     font-size: x-large;
     font-weight: 700;
     border: none;
+    max-width: 80%;
+    background-color: transparent;
 }
 input[type='color']{
     height: 30px;
@@ -58,7 +60,7 @@ input[type='color']{
 }
 .board{
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
-    max-width : 400px;
+    max-width : 300px;
     background-color: white;
     border-radius: var(--radius);
     display: flex;
@@ -90,7 +92,7 @@ input[type='color']{
     border-radius: var(--radius) var(--radius) 0 0;
     font-weight: 700;
     font-size: x-large;
-    width: 370px;
+    width: 270px;
     border : 1px solid gray;
     border-bottom: none;
     height: 60px;
@@ -121,7 +123,7 @@ input[type='color']{
     border-top: none;
     border-bottom: none;
     height: 95%;
-    width: 370px;
+    width: 270px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -190,7 +192,7 @@ input[type='color']{
 .add-task-btn{
     font-weight: 700;
     font-size: x-large;
-    width: 370px;
+    width: 270px;
     height: 60px;
     border : 1px solid gray;
     border-top: none;
