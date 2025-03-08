@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <input type="text" id="project-title-input" class="changable-input"/>
+            <input type="color" name="bodyBgColor" id="body-bg-color" value="#ffffff">
+        </header>
+        <div class="boards">
+            <h3 class="no-task">~No Boards to show~</h3>
+        </div>
+    </div>
+    <div id="add-board-btn">+</div>
+    <div class="add-task-container" style="display: none;">
+        <div class="add-task-form">
+            <h3>Add Task</h3>
+            <div class="input-field">
+                <label for="heading-input">Heading</label>
+                <input type="text" id="heading-input" placeholder="Add Task Heading here" >
+            </div>
+            <div class="input-field">
+                <label for="date-input">Due Date</label>
+                <input type="date" id="date-input" >
+            </div>
+            <div class="input-field">
+                <label for="description-input">Description</label>
+                <textarea id="description-input" placeholder="Add Task Description here"></textarea>
+            </div>
+            <div class="control-button">
+                <button id="submit">Add Task</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="saveToLocal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

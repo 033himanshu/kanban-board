@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+:root{
+    --radius : 10px;
+}
+.container{
+    gap: 10px;
+    padding: 5px;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: black; */
+}
+header{
+    background-color: white;
+    width: 95%;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    position: relative;
+}
+input{
+    border-radius: var(--radius);
+}
+#project-title-input{
+    padding: 8px 20px;
+    font-size: x-large;
+    font-weight: 700;
+    border: none;
+}
+input[type='color']{
+    height: 30px;
+    width: 30px;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top:auto;
+    background-color: transparent;
+}
+.boards{
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    gap : 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    text-align: center;
+}
+.board{
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+    max-width : 400px;
+    background-color: white;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* background-color: aqua; */
+    position: relative;
+}
+.board-delete{
+    height: 25px;
+    width: 25px;
+    background-image: url("boarddlt.png");
+    background-size: cover;
+    background-color: transparent;
+    border-radius: var(--radius);
+    border: none;
+    position: absolute;
+    right : 25px;
+    bottom: 25px;
+    cursor: pointer;
+}
+.board-heading{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(255, 255, 255); */
+    background-color : rgb(220, 220, 220);
+    padding: 10px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    font-weight: 700;
+    font-size: x-large;
+    width: 370px;
+    border : 1px solid gray;
+    border-bottom: none;
+    height: 60px;
+    /* background-color: white; */
+}
+.board-title-input{
+    padding: 5px;
+    /* text-align: center; */
+    border-radius: var(--radius);
+    font-size: larger;
+    font-weight: 500;
+    height: 35px;
+    width: 50%;
+    background-color: transparent;
+}
+.changable-input{
+    border: none;
+}
+.changable-input:focus{
+    outline: none;
+}
+.task-count{
+    position: absolute;
+    right: 50px;
+}
+.tasks{
+    border : 1px solid gray;
+    border-top: none;
+    border-bottom: none;
+    height: 95%;
+    width: 370px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: white;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.no-task{
+    text-align: center;
+    color: rgb(99, 99, 99);
+}
+.task{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* background-color: white; */
+    border-radius: var(--radius);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid gray;
+    position: relative;
+}
+.task-heading{
+    font-size: larger;
+    font-weight: 600;
+}
+.task input{
+    font-weight: 600;
+    padding: 4px 10px;
+    font-size: larger;
+}
+.task-delete{
+    height: 25px;
+    width: 25px;
+    background-image: url("delete.png");
+    background-size: cover;
+    border-radius: var(--radius);
+    border: none;
+    position: absolute;
+    right : 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.description-edit-input{
+    resize: none;
+    field-sizing: content;
+    padding: 4px 10px;
+    font-size: 0.8em;
+    text-align: start;
+    max-width: 100%;
+}
+.date-edit-input{
+    font-size: large;
+    font-weight: 500;
+    color : rgb(0, 0, 255);
+}
+.late{
+    font-size: large;
+    font-weight: 500;
+    color : rgb(255, 0, 0);
+}
+
+.add-task-btn{
+    font-weight: 700;
+    font-size: x-large;
+    width: 370px;
+    height: 60px;
+    border : 1px solid gray;
+    border-top: none;
+    padding: 10px;
+    background-color : rgb(220, 220, 220);
+    border-radius: 0 0 var(--radius) var(--radius);
+    cursor: pointer;
+}
+.add-task-container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-task-form{
+    height: 60%;
+    width: 50vh;
+    min-width: 300px;
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: var(--radius);
+    padding: 10px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap : 5px;
+}
+.input-field label{
+    font-size: large;
+}
+.input-field input{
+    font-size: large;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+}
+textarea{
+    border-radius: var(--radius);
+}
+.input-field textarea{
+    max-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    font-size: large;
+    font-weight: 600;
+    padding: 5px 10px;
+    /* border-radius: var(--radius); */
+}
+.control-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.control-button button{
+    border-radius: var(--radius);
+    padding: 5px 20px;
+    font-size: medium;
+    font-weight: 600;
+    color : white;
+    border: 0;
+    cursor: pointer;
+}
+#submit{
+    background-color: rgb(0, 0, 255);
+}
+
+#cancel{
+    background-color: rgb(255, 0, 0);
+}
+#add-board-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: rgb(68, 0, 255);
+    color : white;
+    border-radius: var(--radius);
+    font-size: xx-large;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.dragging{
+    opacity: 0.4;
+}
