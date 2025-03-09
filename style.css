@@ -20,14 +20,15 @@
 header{
     background-color: white;
     width: 95%;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: var(--radius);
-    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     position: relative;
+    box-shadow: inset rgba(148, 148, 148, 0.25) 0 -5px 5px, inset rgba(148, 148, 148, 0.25) -5px 0 5px, inset rgba(148, 148, 148, 0.25) 5px 0 5px,inset rgba(148, 148, 148, 0.25) 0px 5px 5px;
 }
 input{
     border-radius: var(--radius);
@@ -35,14 +36,15 @@ input{
 #project-title-input{
     padding: 8px 20px;
     font-size: x-large;
-    font-weight: 700;
+    font-weight: 600;
     border: none;
     max-width: 80%;
+    text-transform: capitalize;
     background-color: transparent;
 }
 input[type='color']{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border: none;
     position: absolute;
     right: 10px;
@@ -59,7 +61,7 @@ input[type='color']{
     text-align: center;
 }
 .board{
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+    box-shadow: inset rgba(148, 148, 148, 0.25) 0px 0px 5px 5px;
     max-width : 300px;
     background-color: white;
     border-radius: var(--radius);
@@ -70,16 +72,16 @@ input[type='color']{
     position: relative;
 }
 .board-delete{
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-image: url("boarddlt.png");
     background-size: cover;
     background-color: transparent;
     border-radius: var(--radius);
     border: none;
     position: absolute;
-    right : 25px;
-    bottom: 25px;
+    right : 20px;
+    bottom: 20px;
     cursor: pointer;
 }
 .board-heading{
@@ -91,12 +93,12 @@ input[type='color']{
     padding: 10px;
     border-radius: var(--radius) var(--radius) 0 0;
     font-weight: 700;
-    font-size: x-large;
+    font-size: large;
     width: 270px;
-    border : 1px solid gray;
+    /* border : 1px solid gray; */
     border-bottom: none;
-    height: 60px;
-    /* background-color: white; */
+    height: 40px;
+    box-shadow: inset rgba(148, 148, 148, 0.5) 0 5px 5px, inset rgba(148, 148, 148, 0.5) -5px 0 5px, inset rgba(148, 148, 148, 0.5) 5px 0 5px;    /* background-color: white; */
 }
 .board-title-input{
     padding: 5px;
@@ -106,6 +108,7 @@ input[type='color']{
     font-weight: 500;
     height: 35px;
     width: 50%;
+    text-transform: capitalize;
     background-color: transparent;
 }
 .changable-input{
@@ -119,7 +122,7 @@ input[type='color']{
     right: 50px;
 }
 .tasks{
-    border : 1px solid gray;
+    /* border : 1px solid gray; */
     border-top: none;
     border-bottom: none;
     height: 95%;
@@ -131,16 +134,18 @@ input[type='color']{
     background-color: white;
     overflow-y: scroll;
     scrollbar-width: none;
+    box-shadow: inset rgba(148, 148, 148,0.5) 5px 0 5px,inset rgba(148, 148, 148, 0.5) -5px 0 5px;
 }
 .no-task{
     text-align: center;
     color: rgb(99, 99, 99);
+    font-size: medium;
 }
 .task{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
     /* background-color: white; */
     border-radius: var(--radius);
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -148,25 +153,22 @@ input[type='color']{
     border: 1px solid gray;
     position: relative;
 }
-.task-heading{
-    font-size: larger;
-    font-weight: 600;
-}
 .task input{
-    font-weight: 600;
-    padding: 4px 10px;
-    font-size: larger;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 2px 10px;
+    font-size: large;
 }
 .task-delete{
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-image: url("delete.png");
     background-size: cover;
     border-radius: var(--radius);
     border: none;
     position: absolute;
-    right : 5px;
-    top: 5px;
+    right : 3px;
+    top: 3px;
     cursor: pointer;
 }
 
@@ -179,8 +181,6 @@ input[type='color']{
     max-width: 100%;
 }
 .date-edit-input{
-    font-size: large;
-    font-weight: 500;
     color : rgb(0, 0, 255);
 }
 .late{
@@ -190,11 +190,13 @@ input[type='color']{
 }
 
 .add-task-btn{
+    box-shadow: inset rgba(148, 148, 148, 0.5) 0 -5px 5px, inset rgba(148, 148, 148, 0.5) -5px 0 5px, inset rgba(148, 148, 148, 0.5) 5px 0 5px;
     font-weight: 700;
-    font-size: x-large;
+    font-size: large;
     width: 270px;
-    height: 60px;
-    border : 1px solid gray;
+    height: 40px;
+    /* border : 1px solid gray; */
+    border:none;
     border-top: none;
     padding: 10px;
     background-color : rgb(220, 220, 220);
@@ -278,11 +280,11 @@ textarea{
     position: absolute;
     bottom: 10px;
     right: 10px;
-    padding: 5px 10px;
+    padding: 3px 8px;
     background-color: rgb(68, 0, 255);
     color : white;
     border-radius: var(--radius);
-    font-size: xx-large;
+    font-size: large;
     font-weight: 900;
     cursor: pointer;
 }
