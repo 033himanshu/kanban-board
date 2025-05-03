@@ -53,13 +53,18 @@ input[type='color']{
 }
 .boards{
     width: 95%;
-    height: 95vh;
+    height: 94vh;
     display: flex;
     gap : 20px;
     overflow-x: scroll;
-    scrollbar-width: none;
     text-align: center;
 }
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #aaa; /* or add it to the track */
+  }
 .board{
     box-shadow: inset rgba(148, 148, 148, 0.25) 0px 0px 5px 5px;
     max-width : 300px;
@@ -67,7 +72,7 @@ input[type='color']{
     border-radius: var(--radius);
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding-top: 10px;
     /* background-color: aqua; */
     position: relative;
 }
@@ -81,7 +86,7 @@ input[type='color']{
     border: none;
     position: absolute;
     right : 20px;
-    bottom: 20px;
+    bottom: 10px;
     cursor: pointer;
 }
 .board-heading{
@@ -133,7 +138,8 @@ input[type='color']{
     gap:10px;
     background-color: white;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: 5px;
+    scrollbar-color: rgb(255, 0, 0);
     box-shadow: inset rgba(148, 148, 148,0.5) 5px 0 5px,inset rgba(148, 148, 148, 0.5) -5px 0 5px;
 }
 .no-task{
